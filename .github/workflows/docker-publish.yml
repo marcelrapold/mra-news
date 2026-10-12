@@ -9,7 +9,14 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  # Bewusst fest auf den bisherigen Paketnamen gepinnt. Das Repo heisst seit
+  # 12.10.2026 marcelrapold/mra-news; mit ${{ github.repository }} wuerde das
+  # Image still nach ghcr.io/marcelrapold/mra-news wandern und ein neues,
+  # leeres GHCR-Paket anlegen. Produktion laeuft ueber Vercel (Projekt
+  # news-rapold-io), nicht ueber dieses Image; der Name bleibt trotzdem stabil,
+  # damit allfaellige Puller von ghcr.io/marcelrapold/news.rapold.io:latest
+  # weiter Updates bekommen. Begruendung: README, Abschnitt «Rapold-Fork».
+  IMAGE_NAME: marcelrapold/news.rapold.io
 
 jobs:
   build-and-push:

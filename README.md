@@ -37,6 +37,22 @@
 
 </div>
 
+## Rapold-Fork (news.rapold.io)
+
+Dieses Repository, [marcelrapold/mra-news](https://github.com/marcelrapold/mra-news) (bis 12.10.2026
+`marcelrapold/news.rapold.io`, alte URLs leiten weiter), ist ein Fork von
+[calesthio/Crucix](https://github.com/calesthio/Crucix) für den Betrieb unter **news.rapold.io**. Alles
+unterhalb dieses Abschnitts ist die unveränderte Upstream-Dokumentation.
+
+| Thema | Stand |
+|---|---|
+| Hosting | Vercel-Projekt `news-rapold-io`, Git-Deploy vom Branch `master` (Express als Serverless-Funktion, `vercel.json`, Lite-Sweep auf Vercel) |
+| Vercel-URL | [news-rapold-io.vercel.app](https://news-rapold-io.vercel.app) |
+| Domain | `news.rapold.io` (CNAME `cname.vercel-dns.com`); Stand 12.10.2026 ist die Domain keinem Vercel-Projekt zugeordnet, HTTPS schlägt deshalb fehl |
+| Docker-Image | `ghcr.io/marcelrapold/news.rapold.io` (Workflow `docker-publish.yml`); der Name ist nach dem Rename bewusst gepinnt, damit das bestehende GHCR-Paket weiterläuft. Kein dokumentierter Konsument; `docker-compose.yml` baut lokal (`build: .`) |
+| Anmeldung | keine; öffentliches Dashboard, API-Schlüssel nur serverseitig über Umgebungsvariablen |
+| Gestaltung | eigenes Crucix-Design; für Crucix gibt es kein Rapold-Produktsignet. Das Rapold-Designsystem ist [Atlas](https://atlas.rapold.io) |
+
 > **Live website:** [https://www.crucix.live/](https://www.crucix.live/)
 > Explore the public demo first, then clone the repo to run Crucix locally.
 
